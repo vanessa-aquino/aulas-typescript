@@ -10,3 +10,13 @@
 }
 
 Você consegue executar os dois passos acima através de um comando só, que nesse caso seria: "npm run start"
+
+// TS NODE DEV
+
+Para não precisar fazer os passos acima na hora de ler o seu código em TS. Basta instalar o TS Node Dev que é um servidor que lê TypeScript. Após isso, basta acessar o arquivo "package.json" e configurá-lo da seguinte mandeira:
+
+  "scripts": {
+    "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  }
+
+Após configurado, basta chamá-lo normalmente com o "npm run start:dev"

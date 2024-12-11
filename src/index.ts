@@ -96,7 +96,7 @@ function concatArray(...itens: any[]): any[] {
 
 const numArr = concatArray([1,5], [3]);
 console.log(numArr);
-const strArr = concatArray(['Bala', 'Chiclete'], ['Bolo', 'Brigadeiro']);
+const strArr = concatArray(['Bala', 'Chiclete'], ['Bolo']);
 console.log(strArr);
 
 numArr.push('festa');
@@ -112,3 +112,14 @@ const numArrGen = concatArrayGen<number[]>([1,5], [3]);
 console.log(numArrGen);
 const strArrGen = concatArrayGen<string[]>(['Bala', 'Chiclete'], ['Bolo', 'Brigadeiro']);
 console.log(strArrGen);
+
+// ----------------------- // ----------------------- // -----------
+
+// DECORATORS
+
+function exibirNome(target: any) {
+    console.log(target);
+}
+
+@exibirNome
+class Funcionario {};
