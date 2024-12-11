@@ -42,3 +42,15 @@ class Magician extends Character {
 }
 const p2 = new Magician('Yennefer', 9, 30, 100);
 console.log(p2);
+function concatArray(...itens) {
+    return new Array().concat(...itens);
+}
+function concatArrayGen(...itens) {
+    return new Array().concat(...itens);
+}
+const numArrGen = concatArrayGen([1, 5], [3]);
+console.log(numArrGen);
+const strArrGen = concatArrayGen(['Bala', 'Chiclete'], ['Bolo', 'Brigadeiro']);
+console.log(strArrGen);
+numArrGen.push('festa');
+console.log(numArrGen);

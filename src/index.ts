@@ -83,3 +83,32 @@ class Magician extends Character {
 
 const p2 = new Magician ('Yennefer', 9, 30, 100);
 console.log(p2);
+
+// ----------------------- // ----------------------- // -----------
+
+// GENERICS:
+
+// EXEMPLO DE FUNÇÃO COM ANY:
+
+function concatArray(...itens: any[]): any[] {
+    return new Array().concat(...itens);
+}
+
+const numArr = concatArray([1,5], [3]);
+console.log(numArr);
+const strArr = concatArray(['Bala', 'Chiclete'], ['Bolo', 'Brigadeiro']);
+console.log(strArr);
+
+numArr.push('festa');
+console.log(numArr);
+
+// EXEMPLO DE FUNÇÃO GENÉRICA:
+
+function concatArrayGen<T>(...itens: T[]): T[] {
+    return new Array().concat(...itens);
+}
+
+const numArrGen = concatArrayGen<number[]>([1,5], [3]);
+console.log(numArrGen);
+const strArrGen = concatArrayGen<string[]>(['Bala', 'Chiclete'], ['Bolo', 'Brigadeiro']);
+console.log(strArrGen);
